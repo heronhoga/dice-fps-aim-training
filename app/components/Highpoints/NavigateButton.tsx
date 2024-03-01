@@ -7,8 +7,12 @@ interface NavigateButtonProps {
 }
 
 const NavigateButton = ({ buttonText, href }: NavigateButtonProps) => (
-  <Link href={href}>{buttonText}</Link>
-  
+  <Link
+    href={href}
+    className="text-white m-5 bg-blue-600 p-2 rounded-md hover:bg-blue-950 font-bold"
+  >
+    {buttonText}
+  </Link>
 );
 
 export default NavigateButton;

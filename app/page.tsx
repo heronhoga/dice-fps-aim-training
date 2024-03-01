@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className="min-h-screen min-w-screen flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="flex-grow flex flex-col justify-center">
-        <header className="mx-auto sm:w-1/2 lg:w-3/4 bg-gradient-to-tr from-purple-500 to-pink-500 rounded-3xl mb-4">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-center text-white">
+        <header className="mx-auto bg-gradient-to-tr from-blue-600 to-blue-900 rounded-3xl mb-4 p-4">
+          <h1 className=" sm:text-5xl md:text-7xl lg:text-9xl font-bold text-center text-white">
             IMISSAIM
           </h1>
         </header>
@@ -22,17 +22,24 @@ export default function Home() {
         </main>
       </div>
 
-      <footer className="items-center justify-between flex">
-        <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5">
+      <footer className="items-center justify-between flex mb-1">
+        <div
+          className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5 font-bold
+          bg-gradient-to-tr from-blue-500 to-blue-900 rounded-xl p-2"
+        >
           <AudioPlayer source="/audio/redrum.mp3" />
         </div>
-        <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5">
-          music: Redrum - 21savage (instrumental)
+        <div
+          className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5 
+          p-2"
+        >
+          music: Redrum - 21savage (instrumental) s/o to Winiss Beats
         </div>
-        <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5">
-          s/o to Winiss Beats
-        </div>
-        <div className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5">
+
+        <div
+          className="text-xs sm:text-sm md:text-base lg:text-lg text-white mx-5 
+          p-2"
+        >
           web by: hg
         </div>
       </footer>
