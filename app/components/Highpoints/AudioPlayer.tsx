@@ -2,17 +2,33 @@
 import React from "react";
 
 interface AudioPlayerProps {
-    source: string;
+  source: string;
 }
 
-const AudioPlayer = ({source}: AudioPlayerProps) => {
+import { useState } from "react";
+
+const AudioPlayer = ({ source }: AudioPlayerProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+    const audio = document.getElementById("audioPlayer") as HTMLAudioElement;
+    if (audio) {
+      if (!isPlaying) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  };
+
   return (
-    <>
-      <audio controls autoPlay>
-        <source src={source} type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </>
+    <div>
+      <button onClick={togglePlay} className="focus:outline-none">
+        {isPlaying ? "Pause music" : "Play music"}
+      </button>
+      <audio id="audioPlayer" src={source} />
+    </div>
   );
 };
 
