@@ -1,11 +1,11 @@
-import NavigateButton from "./components/Highpoints/NavigateButton";
-import AudioPlayer from "./components/Highpoints/AudioPlayer";
+import NavigateButton from "./components/NavigateButton";
+import AudioPlayer from "./components/AudioPlayer";
 
 export default function Home() {
   return (
     <div className="min-h-screen min-w-screen flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500">
       <div className="flex-grow flex flex-col justify-center">
-        <header className="mx-auto bg-gradient-to-tr from-blue-600 to-blue-900 rounded-3xl mb-4 p-4">
+        <header className="mx-auto bg-gradient-to-tr from-blue-600 to-blue-900 rounded-3xl mb-4 p-4 shadow-xl">
           <h1 className=" sm:text-5xl md:text-7xl lg:text-9xl font-bold text-center text-white">
             IMISSAIM
           </h1>
@@ -16,8 +16,8 @@ export default function Home() {
             Your FPS Aim Training Assistant
           </h2>
           <div className="flex justify-center items-center flex-row mx-auto">
-            <NavigateButton buttonText="Highpoints" href="/highpoints" />
-            <NavigateButton buttonText="Fastflick" href="/fastflick" />
+            <NavigateButton buttonText="HIGHPOINTS" href="/highpoints" />
+            <NavigateButton buttonText="FASTFLICK" href="/fastflick" />
           </div>
         </main>
       </div>
